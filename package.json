@@ -16,6 +16,10 @@
     "rimraf": "^5.0.0"
   },
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "date-fns": "^2.30.0",
+    "google-auth-library": "^8.8.0",
+    "googleapis": "^105.0.0",
     "speedtest-net": "^2.2.0"
   }
 }

@@ -1,11 +1,17 @@
-import { runSpeedTest } from "./speed-test";
+import { writeResults } from "./write-results";
+import speedTest from "speedtest-net";
+
+async function main() {
+  const result = await speedTest();
+
+  console.log(result);
+
+  await writeResults({
+    download: result.download.bytes,
+    upload: result.upload.bytes,
+    latency: result.ping.latency
+  });
+}
 
 main();
 
-async function main() {
-  const result = await runSpeedTest();
-
-  if (result.ok) {
-    console.log("result.payload: ", result.payload);
-  }
-}
