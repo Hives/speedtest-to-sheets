@@ -2,6 +2,11 @@
 
 Run https://www.speedtest.net/ and upload the results to Google Sheets.
 
+## What does it do?
+
+It runs https://www.npmjs.com/package/speedtest-net and then appends the date,
+upload speed, download speed and latency to a Google Sheet.
+
 ## Installation
 
 ```bash
@@ -16,6 +21,9 @@ folder. The first time you run the script it will take you through the process
 of logging in in a browser, then it will save an access token in the `secrets/`
 folder.
 
+Add your own spreadsheet ID in `write-results.ts`. Its the long (44 char) id
+number in the url when you view the spreadsheet in a browser.
+
 ## To run it
 
 ```bash
@@ -27,7 +35,7 @@ npm start
 npm run dev
 ```
 
-## Run it via crontab
+## Run it on a schedule via crontab
 
 Edit your crontab with `crontab -e`. Add something like this:
 
